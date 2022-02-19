@@ -1,0 +1,33 @@
+.wp-block-image {
+  margin-bottom: var(--base-space);
+
+  .alignleft {
+    margin: calc(var(--base-space) / 2) var(--base-space) calc(var(--base-space) / 2) 0;
+  }
+
+  .alignright {
+    margin: calc(var(--base-space) / 2) 0 calc(var(--base-space) / 2) var(--base-space);
+  }
+
+  figure {
+    margin-bottom: 0;
+  }
+
+  figcaption {
+    margin: calc(var(--base-space) / 2) 0 var(--base-space);
+    text-align: center;
+    font-size: var(--base-font-size-small);
+    display: block;
+  }
+
+  @media (max-width: 599px) {
+    .alignright, .alignleft {
+      width: 100%;
+      margin: 0 0 var(--base-space) 0;
+    }
+
+    .alignright img, .alignleft img {
+      width: 100%;
+    }
+  }
+}

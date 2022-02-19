@@ -1,0 +1,27 @@
+.wp-block-group {
+  &.has-space-before {
+    margin-top: var(--base-offset-vertical);
+  }
+
+  &.has-space-after {
+    margin-bottom: var(--base-offset-vertical);
+  }
+
+  &.has-background {
+    padding-top: var(--base-offset-vertical);
+    padding-bottom: var(--base-offset-vertical);
+
+    &:not(.alignwide):not(.alignfull) {
+      padding-left: var(--base-offset);
+      padding-right: var(--base-offset);
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    > * > :first-child {
+      margin-top: 0;
+    }
+  }
+}

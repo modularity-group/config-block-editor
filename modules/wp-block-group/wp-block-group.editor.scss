@@ -1,0 +1,26 @@
+.editor-styles-wrapper .is-root-container {
+  .wp-block-group {
+
+    &.has-space-before {
+      margin-top: var(--base-offset-vertical);
+    }
+
+    &.has-space-after {
+      margin-bottom: var(--base-offset-vertical);
+    }
+
+    &.has-background {
+      padding-top: var(--base-offset);
+      padding-bottom: var(--base-offset);
+
+      &:not([data-align=wide]):not([data-align=full]) {
+        padding-left: var(--base-offset);
+        padding-right: var(--base-offset);
+      }
+
+      > * > :first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

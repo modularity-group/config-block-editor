@@ -1,0 +1,13 @@
+.editor-styles-wrapper .is-root-container {
+  .wp-block-separator {
+    border: 0;
+    border-top: 1px solid var(--base-color-light);
+    max-width: var(--base-content-width) !important;
+    margin-top: var(--base-space) !important;
+    margin-bottom: var(--base-space) !important;
+  }
+
+  .wp-block[data-align='full'] .wp-block-separator {
+    max-width: 100% !important;
+  }
+}

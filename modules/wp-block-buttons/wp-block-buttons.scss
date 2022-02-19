@@ -1,0 +1,24 @@
+// generate_editor_styles=true
+
+.wp-block-buttons {
+  .wp-block-button {
+    &__link {
+      border-radius: 0;
+      padding: calc(var(--base-space) / 2) var(--base-space);
+      font-size: inherit;
+    }
+
+    &.is-style-fill {
+      .wp-block-button__link {
+        background-color: var(--base-color-accent);
+      }
+    }
+
+    &.is-style-outline {
+      .wp-block-button__link {
+        border-color: var(--base-color-accent);
+        color: var(--base-color-accent);
+      }
+    }
+  }
+}

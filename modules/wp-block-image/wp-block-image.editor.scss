@@ -1,0 +1,13 @@
+.editor-styles-wrapper .is-root-container {
+  .wp-block-image {
+    margin-bottom: var(--base-space) !important;
+    height: auto;
+
+    figcaption {
+      margin: calc(var(--base-space) / 2) 0 var(--base-space);
+      text-align: center;
+      font-size: var(--base-font-size-small);
+      display: block !important;
+    }
+  }
+}
