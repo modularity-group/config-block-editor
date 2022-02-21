@@ -10,8 +10,8 @@
     }
 
     &.has-background {
-      padding-top: var(--base-offset);
-      padding-bottom: var(--base-offset);
+      padding-top: var(--base-offset-vertical);
+      padding-bottom: var(--base-offset-vertical);
 
       &:not([data-align=wide]):not([data-align=full]) {
         padding-left: var(--base-offset);
