@@ -4,7 +4,7 @@ Tune the block-editor and some crucial wp-blocks for a minimal resetted setup.
 
 ---
 
-Version: 1.0.0
+Version: 1.0.1
 
 Author: Matze @ https://modularity.group
 
@@ -19,6 +19,8 @@ License: MIT
 Usage for site-layout: use `.site-layout-container` in frontend as container for block-output
 
 ---
+
+1.0.1 | fix layout styles
 
 1.0.0 | init
 

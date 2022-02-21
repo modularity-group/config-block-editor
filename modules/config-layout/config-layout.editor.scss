@@ -9,8 +9,8 @@
       margin-right: auto;
 
       &[data-align=wide] {
-        width: 100%;
-        max-width: var(--base-layout-width) !important;
+        width: var(--base-layout-width);
+        //max-width: var(--base-layout-width) !important;
 
         > .wp-block-group > * {
           padding-left: var(--base-offset);
@@ -62,10 +62,6 @@
 
       &[data-align='right'] > * {
         float: right;
-      }
-
-      &[data-align='wide'] {
-        max-width: var(--base-layout-width) !important;
       }
     }
   }

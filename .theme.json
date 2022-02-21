@@ -1,0 +1,120 @@
+{
+  "version": 2,
+  "settings": {
+
+    "appearanceTools": false,
+    "typography": {
+      "customFontSize": false,
+      "fontStyle": false,
+      "fontWeight": false,
+      "letterSpacing": false,
+      "lineHeight": false,
+      "textDecoration": false,
+      "textTransform": false,
+      "dropCap": false,
+      "fontSizes": [],
+      "fontFamilies": []
+    },
+
+    "blocks": {
+      "core/button": {
+        "typography": {
+          "fontSizes": [
+            {
+              "slug": "small",
+              "size": "var(--base-font-size-small)",
+              "name": "Small"
+            },
+            {
+              "slug": "medium",
+              "size": "var(--base-font-size-medium)",
+              "name": "Medium"
+            },
+            {
+              "slug": "base",
+              "size": "var(--base-font-size)",
+              "name": "Base"
+            }
+          ]
+        },
+        "border": {
+          "radius": false,
+          "width": false
+        }
+      }
+    },
+
+    "layout": {
+      "contentSize": "var(--base-content-width)",
+      "wideSize": "var(--base-layout-width)",
+      "units": [ "px", "rem", "%", "vw", "vh" ]
+    },
+
+    "color": {
+      "link": false,
+      "gradients": [],
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        {
+          "name": "Text",
+          "slug": "text",
+          "color": "var(--base-color-text)"
+        },
+        {
+          "name": "Accent",
+          "slug": "accent",
+          "color": "var(--base-color-accent)"
+        },
+        {
+          "name": "Light",
+          "slug": "light",
+          "color": "var(--base-color-light)"
+        },
+        {
+          "name": "Background",
+          "slug": "background",
+          "color": "var(--base-color-background)"
+        }
+      ]
+    },
+
+    "spacing": {
+      "padding": false,
+      "margin": false,
+      "units": [ "px", "rem", "%", "vw" ]
+    },
+
+    "border": {
+      "color": false,
+      "radius": false,
+      "style": false,
+      "width": false
+    }
+
+  },
+
+  "styles": {
+    "color":{
+      "background": "var(--base-color-background)",
+      "text": "var(--base-color-text)",
+      "link": "var(--base-color-accent)"
+    },
+    "typography":{
+      "fontSize": "var(--base-font-size)",
+      "fontFamily": "var(--base-font-family)",
+      "lineHeight": "var(--base-line-height)"
+    },
+    "spacing":{
+      "margin":{
+        "top": "0px",
+        "right": "0px",
+        "bottom": "0px",
+        "left": "0px"
+      }
+    }
+  }
+}
