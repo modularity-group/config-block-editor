@@ -29,10 +29,6 @@ function addAttributes(settings, name) {
 					type: 'boolean',
 					default: false,
 				},
-        isBoxed: {
-					type: 'boolean',
-					default: false,
-				},
 			}),
 		});
 	}
@@ -51,7 +47,7 @@ addFilter(
 const addInspectorControl = createHigherOrderComponent((BlockEdit) => {
 	return (props) => {
 		const {
-			attributes: { spaceBefore, spaceAfter, isBoxed },
+			attributes: { spaceBefore, spaceAfter },
 			setAttributes,
 			name,
 		} = props;
@@ -64,7 +60,7 @@ const addInspectorControl = createHigherOrderComponent((BlockEdit) => {
 			<Fragment>
 				<BlockEdit {...props} />
 				<InspectorControls>
-					<PanelBody title={__('Spacing & Layout', 'modularity')} initialOpen={true}>
+					<PanelBody title={__('Spacing', 'modularity')} initialOpen={true}>
 						<ToggleControl
 							label={__('Space before', 'modularity')}
               checked={ !! spaceBefore }
@@ -77,13 +73,6 @@ const addInspectorControl = createHigherOrderComponent((BlockEdit) => {
               checked={ !! spaceAfter }
 							onChange={() => {
 								setAttributes({ spaceAfter: ! spaceAfter });
-							}}
-						/>
-            <ToggleControl
-							label={__('Boxed', 'modularity')}
-              checked={ !! isBoxed }
-							onChange={() => {
-								setAttributes({ isBoxed: ! isBoxed });
 							}}
 						/>
 					</PanelBody>
@@ -105,7 +94,7 @@ addFilter(
 const addSpaceClassEditor = createHigherOrderComponent((BlockListBlock) => {
 	return (props) => {
 		const {
-			attributes: { spaceBefore, spaceAfter, isBoxed },
+			attributes: { spaceBefore, spaceAfter },
 			className,
 			name,
 		} = props;
@@ -117,7 +106,7 @@ const addSpaceClassEditor = createHigherOrderComponent((BlockListBlock) => {
 		return (
 			<BlockListBlock
 				{...props}
-				className={classnames(className, spaceBefore ? `has-space-before` : '', spaceAfter ? `has-space-after` : '', isBoxed ? `is-boxed` : '' )}
+				className={classnames(className, spaceBefore ? `has-space-before` : '', spaceAfter ? `has-space-after` : '' )}
 			/>
 		);
 	};
@@ -143,10 +132,10 @@ function addSpaceClassFrontEnd(props, block, attributes) {
 	}
 
 	const { className } = props;
-	const { spaceBefore, spaceAfter, isBoxed } = attributes;
+	const { spaceBefore, spaceAfter } = attributes;
 
 	return assign({}, props, {
-		className: classnames(className, spaceBefore ? `has-space-before` : '', spaceAfter ? `has-space-after` : '', isBoxed ? `is-boxed` : ''),
+		className: classnames(className, spaceBefore ? `has-space-before` : '', spaceAfter ? `has-space-after` : ''),
 	});
 }
 

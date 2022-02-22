@@ -22,5 +22,12 @@
         margin-top: 0;
       }
     }
+
+    &.is-boxed {
+      width: calc(100% - 2 * var(--base-offset)) !important;
+      max-width: var(--base-layout-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
