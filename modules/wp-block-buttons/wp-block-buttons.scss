@@ -3,11 +3,11 @@
 .wp-block-buttons {
 
   &.has-space-before {
-    margin-top: var(--base-offset-vertical);
+    margin-top: var(--base-offset-vertical) !important;
   }
 
   &.has-space-after {
-    margin-bottom: var(--base-offset-vertical);
+    margin-bottom: var(--base-offset-vertical) !important;
   }
 
   .wp-block-button {

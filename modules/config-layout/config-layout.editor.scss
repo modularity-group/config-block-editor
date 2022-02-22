@@ -10,6 +10,7 @@
 
       &[data-align=wide] {
         width: var(--base-layout-width);
+        max-width: calc(100% - calc(2 * var(--base-offset))) !important;
 
         > .wp-block-group > * {
           padding-left: var(--base-offset);

@@ -21,14 +21,10 @@ function addAttributes(settings, name) {
 	if (name === 'core/heading') {
 		return assign({}, settings, {
 			attributes: merge(settings.attributes, {
-				spaceBefore: {
+				isWide: {
 					type: 'boolean',
 					default: false,
-				},
-        spaceAfter: {
-					type: 'boolean',
-					default: false,
-				},
+				}
 			}),
 		});
 	}
@@ -47,7 +43,7 @@ addFilter(
 const addInspectorControl = createHigherOrderComponent((BlockEdit) => {
 	return (props) => {
 		const {
-			attributes: { spaceBefore, spaceAfter },
+			attributes: { isWide },
 			setAttributes,
 			name,
 		} = props;
@@ -60,19 +56,12 @@ const addInspectorControl = createHigherOrderComponent((BlockEdit) => {
 			<Fragment>
 				<BlockEdit {...props} />
 				<InspectorControls>
-					<PanelBody title={__('Spacing', 'modularity')} initialOpen={true}>
+					<PanelBody title={__('Layout', 'modularity')} initialOpen={true}>
 						<ToggleControl
-							label={__('Space before', 'modularity')}
-              checked={ !! spaceBefore }
+							label={__('Wide', 'modularity')}
+              checked={ !! isWide }
 							onChange={() => {
-								setAttributes({ spaceBefore: ! spaceBefore });
-							}}
-						/>
-            <ToggleControl
-							label={__('Space after', 'modularity')}
-              checked={ !! spaceAfter }
-							onChange={() => {
-								setAttributes({ spaceAfter: ! spaceAfter });
+								setAttributes({ isWide: ! isWide });
 							}}
 						/>
 					</PanelBody>
@@ -94,7 +83,7 @@ addFilter(
 const addSpaceClassEditor = createHigherOrderComponent((BlockListBlock) => {
 	return (props) => {
 		const {
-			attributes: { spaceBefore, spaceAfter },
+			attributes: { isWide },
 			className,
 			name,
 		} = props;
@@ -106,7 +95,7 @@ const addSpaceClassEditor = createHigherOrderComponent((BlockListBlock) => {
 		return (
 			<BlockListBlock
 				{...props}
-				className={classnames(className, spaceBefore ? `has-space-before` : '', spaceAfter ? `has-space-after` : '' )}
+				className={classnames(className, isWide ? `is-wide` : '')}
 			/>
 		);
 	};
@@ -132,10 +121,10 @@ function addSpaceClassFrontEnd(props, block, attributes) {
 	}
 
 	const { className } = props;
-	const { spaceBefore, spaceAfter } = attributes;
+	const { isWide } = attributes;
 
 	return assign({}, props, {
-		className: classnames(className, spaceBefore ? `has-space-before` : '', spaceAfter ? `has-space-after` : ''),
+		className: classnames(className, isWide ? `is-wide` : ''),
 	});
 }
 

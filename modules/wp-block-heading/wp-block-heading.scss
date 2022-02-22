@@ -2,10 +2,14 @@
 
 h1,h2,h3,h4,h5,h6 {
   &.has-space-before {
-    margin-top: var(--base-offset-vertical);
+    margin-top: var(--base-offset-vertical) !important;
   }
 
   &.has-space-after {
-    margin-bottom: var(--base-offset-vertical);
+    margin-bottom: var(--base-offset-vertical) !important;
+  }
+
+  &.is-wide {
+    width: var(--base-layout-width);
   }
 }
