@@ -1,12 +1,4 @@
 .wp-block-group {
-  &.has-space-before {
-    margin-top: var(--base-offset-vertical) !important;
-  }
-
-  &.has-space-after {
-    margin-bottom: var(--base-offset-vertical) !important;
-  }
-
   &.has-background {
     padding-top: var(--base-offset-vertical);
     padding-bottom: var(--base-offset-vertical);

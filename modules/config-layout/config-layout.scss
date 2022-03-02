@@ -19,21 +19,47 @@
     &.alignfull {
       width: 100%;
       max-width: 100%;
+    }
 
-      > p,
-      > h1,
-      > h2,
-      > h3,
-      > h4,
-      > ol,
-      > ul,
-      > article {
+    &.wp-block-group {
+      &.inner-alignwide > * {
+        width: var(--base-layout-width);
+        max-width: calc(100% - calc(2 * var(--base-offset)));
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &.inner-aligncontent > * {
         width: var(--base-content-width);
         max-width: calc(100% - calc(2 * var(--base-offset)));
         margin-left: auto;
         margin-right: auto;
       }
     }
+
+    &.wp-block-cover {
+      &.inner-alignwide .wp-block-cover__inner-container > * {
+        width: var(--base-layout-width);
+        max-width: calc(100% - calc(2 * var(--base-offset)));
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &.inner-aligncontent .wp-block-cover__inner-container > * {
+        width: var(--base-content-width);
+        max-width: calc(100% - calc(2 * var(--base-offset)));
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .has-space-before {
+    margin-top: var(--base-offset-vertical) !important;
+  }
+
+  .has-space-after {
+    margin-bottom: var(--base-offset-vertical) !important;
   }
 
   > :first-child:not(div) {

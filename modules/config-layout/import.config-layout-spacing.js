@@ -11,14 +11,14 @@ const { InspectorControls } = wp.blockEditor;
 const { PanelBody, ToggleControl } = wp.components;
 
 /**
- * Add attribute to Button block
+ * Add spacing attributes to all blocks
  *
  * @param  {Object} settings Original block settings
  * @param  {string} name     Block name
  * @return {Object}          Filtered block settings
  */
-function addAttributes(settings, name) {
-	if (name === 'core/group') {
+function addSpacingAttributes(settings, name) {
+	//if (name === 'core/buttons') {
 		return assign({}, settings, {
 			attributes: merge(settings.attributes, {
 				spaceBefore: {
@@ -28,43 +28,39 @@ function addAttributes(settings, name) {
         spaceAfter: {
 					type: 'boolean',
 					default: false,
-				},
-        isBoxed: {
-					type: 'boolean',
-					default: false,
-				},
+				}
 			}),
 		});
-	}
+	//}
 	return settings;
 }
 
 addFilter(
 	'blocks.registerBlockType',
-	'config-block-editor/wp-block-group/add-attributes',
-	addAttributes,
+	'config-block-editor/layout-spacing/add-attributes',
+	addSpacingAttributes,
 );
 
 /**
  * Add control to Button block
  */
-const addInspectorControl = createHigherOrderComponent((BlockEdit) => {
+const addSpacingInspectorControl = createHigherOrderComponent((BlockEdit) => {
 	return (props) => {
 		const {
-			attributes: { spaceBefore, spaceAfter, isBoxed },
+			attributes: { spaceBefore, spaceAfter },
 			setAttributes,
 			name,
 		} = props;
 
-		if (name !== 'core/group') {
+		/*if (name !== 'core/buttons') {
 			return <BlockEdit {...props} />;
-		}
+		}*/
 
 		return (
 			<Fragment>
 				<BlockEdit {...props} />
 				<InspectorControls>
-					<PanelBody title={__('Spacing & Layout', 'modularity')} initialOpen={true}>
+					<PanelBody title={__('Spacing', 'modularity')} initialOpen={true}>
 						<ToggleControl
 							label={__('Space before', 'modularity')}
               checked={ !! spaceBefore }
@@ -79,13 +75,6 @@ const addInspectorControl = createHigherOrderComponent((BlockEdit) => {
 								setAttributes({ spaceAfter: ! spaceAfter });
 							}}
 						/>
-            <ToggleControl
-							label={__('Boxed', 'modularity')}
-              checked={ !! isBoxed }
-							onChange={() => {
-								setAttributes({ isBoxed: ! isBoxed });
-							}}
-						/>
 					</PanelBody>
 				</InspectorControls>
 			</Fragment>
@@ -95,29 +84,29 @@ const addInspectorControl = createHigherOrderComponent((BlockEdit) => {
 
 addFilter(
 	'editor.BlockEdit',
-	'config-block-editor/wp-block-group/add-inspector-controls',
-	addInspectorControl,
+	'config-block-editor/layout-spacing/add-inspector-controls',
+	addSpacingInspectorControl,
 );
 
 /**
  * Add class to the block in the editor
  */
-const addSpaceClassEditor = createHigherOrderComponent((BlockListBlock) => {
+const addSpacingClassEditor = createHigherOrderComponent((BlockListBlock) => {
 	return (props) => {
 		const {
-			attributes: { spaceBefore, spaceAfter, isBoxed },
+			attributes: { spaceBefore, spaceAfter },
 			className,
 			name,
 		} = props;
 
-		if (name !== 'core/group') {
+		/*if (name !== 'core/buttons') {
 			return <BlockListBlock {...props} />;
-		}
+		}*/
 
 		return (
 			<BlockListBlock
 				{...props}
-				className={classnames(className, spaceBefore ? `has-space-before` : '', spaceAfter ? `has-space-after` : '', isBoxed ? `is-boxed` : '' )}
+				className={classnames(className, spaceBefore ? `has-space-before` : '', spaceAfter ? `has-space-after` : '')}
 			/>
 		);
 	};
@@ -125,8 +114,8 @@ const addSpaceClassEditor = createHigherOrderComponent((BlockListBlock) => {
 
 addFilter(
 	'editor.BlockListBlock',
-	'config-block-editor/wp-block-group/add-editor-class',
-	addSpaceClassEditor,
+	'config-block-editor/layout-spacing/add-editor-class',
+	addSpacingClassEditor,
 );
 
 /**
@@ -137,22 +126,21 @@ addFilter(
  * @param  {Object} attributes Current block attributes.
  * @return {Object}            Filtered props applied to save element.
  */
-function addSpaceClassFrontEnd(props, block, attributes) {
-	if (block.name !== 'core/group') {
+function addSpacingClassFrontEnd(props, block, attributes) {
+	/*if (block.name !== 'core/buttons') {
 		return props;
-	}
+	}*/
 
 	const { className } = props;
-	const { spaceBefore, spaceAfter, isBoxed } = attributes;
+	const { spaceBefore, spaceAfter } = attributes;
 
 	return assign({}, props, {
-		className: classnames(className, spaceBefore ? `has-space-before` : '', spaceAfter ? `has-space-after` : '', isBoxed ? `is-boxed` : ''),
+		className: classnames(className, spaceBefore ? `has-space-before` : '', spaceAfter ? `has-space-after` : ''),
 	});
 }
 
-// Comment out to test the PHP approach defined in intro-to-block-filters.php
 addFilter(
 	'blocks.getSaveContent.extraProps',
-	'config-block-editor/wp-block-group/add-front-end-class',
-	addSpaceClassFrontEnd,
+	'config-block-editor/layout-spacing/add-front-end-class',
+	addSpacingClassFrontEnd,
 );

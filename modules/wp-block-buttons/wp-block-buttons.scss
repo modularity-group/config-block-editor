@@ -2,14 +2,6 @@
 
 .wp-block-buttons {
 
-  &.has-space-before {
-    margin-top: var(--base-offset-vertical) !important;
-  }
-
-  &.has-space-after {
-    margin-bottom: var(--base-offset-vertical) !important;
-  }
-
   .wp-block-button {
     &__link {
       border-radius: 0;

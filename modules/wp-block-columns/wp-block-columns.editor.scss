@@ -4,21 +4,6 @@
     margin-top: 0;
     margin-bottom: 0;
 
-    &.has-space-before {
-      margin-top: var(--base-offset-vertical) !important;
-    }
-
-    &.has-space-after {
-      margin-bottom: var(--base-offset-vertical) !important;
-    }
-
-    &.is-boxed {
-      width: 100%;
-      max-width: var(--base-layout-width) !important;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
     &.has-background {
       padding: var(--base-offset-vertical) var(--base-offset);
     }

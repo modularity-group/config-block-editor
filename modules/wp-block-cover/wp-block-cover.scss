@@ -1,16 +1,12 @@
 .wp-block-cover,.wp-block-cover-image {
-  padding: var(--base-offset);
 
-  &.has-space-before {
-    margin-top: var(--base-offset-vertical) !important;
-  }
+  &__inner-container {
+    padding-top: var(--base-offset-vertical);
+    padding-bottom: var(--base-offset-vertical);
 
-  &.has-space-after {
-    margin-bottom: var(--base-offset-vertical) !important;
-  }
-
-  &__inner-container :last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   h1 {

@@ -4,7 +4,7 @@ Tune the block-editor and some crucial wp-blocks for a minimal resetted setup.
 
 ---
 
-Version: 1.1.5
+Version: 1.2.0
 
 Author: Matze @ https://modularity.group
 
@@ -19,6 +19,12 @@ License: MIT
 Usage for site-layout: use `.site-layout-container` in frontend as container for block-output
 
 ---
+
+1.2.0
+- Improve layout settings: space before and space after is a global setting for all blocks now
+- Add innerContent setting for `core/group` and `core/cover` with settings: `Full width` (default), `Layout width` and `Content width`
+- disable core (experimanetal) layout-settings panel for `core/group`
+- fix some detail-styling for block offsets 
 
 1.1.5 | layout fixes
 
