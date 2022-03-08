@@ -1,7 +1,7 @@
 {
-  "name": "intro-to-block-filters",
+  "name": "config-block-editor",
   "version": "0.1.0",
-  "author": "YOUR NAME HERE",
+  "author": "modularity group",
   "scripts": {
     "build": "wp-scripts build",
     "format:js": "wp-scripts format-js",
