@@ -1,5 +1,7 @@
 .editor-styles-wrapper .is-root-container {
   .wp-block-cover,.wp-block-cover-image {
+    padding: 0;
+
     &__inner-container {
       padding-top: var(--base-offset-vertical);
       padding-bottom: var(--base-offset-vertical);

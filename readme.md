@@ -4,7 +4,7 @@ Tune the block-editor and some crucial wp-blocks for a minimal resetted setup.
 
 ---
 
-Version: 1.2.0
+Version: 1.2.1
 
 Author: Matze @ https://modularity.group
 
@@ -19,6 +19,9 @@ License: MIT
 Usage for site-layout: use `.site-layout-container` in frontend as container for block-output
 
 ---
+
+1.2.1
+- layout fix for inconsistant inner blocks of `wp-block-group` + `wp-block-cover`
 
 1.2.0
 - Improve layout settings: space before and space after is a global setting for all blocks now
