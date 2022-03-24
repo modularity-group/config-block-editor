@@ -7,14 +7,14 @@
       padding-left: 0;
       padding-right: 0;
 
+      &:not([data-align=wide]):not([data-align=full]) > * {
+        padding-left: var(--base-offset);
+        padding-right: var(--base-offset);
+      }
+
       > * > :first-child {
         margin-top: 0;
       }
-    }
-
-    &:not([data-align=wide]):not([data-align=full]) > * {
-      padding-left: var(--base-offset);
-      padding-right: var(--base-offset);
     }
 
     &.is-boxed {

@@ -4,7 +4,7 @@ Tune the block-editor and some crucial wp-blocks for a minimal resetted setup.
 
 ---
 
-Version: 1.2.1
+Version: 1.2.2
 
 Author: Matze @ https://modularity.group
 
@@ -19,6 +19,10 @@ License: MIT
 Usage for site-layout: use `.site-layout-container` in frontend as container for block-output
 
 ---
+
+1.2.2
+- layout fix for image alignments inside groups in block editor
+- rename `.theme.json` preset text-color-variable from `text`to `basetext`. text interferes with wp core class `.has-text-color` for all elements that have set up a text-color
 
 1.2.1
 - layout fix for inconsistant inner blocks of `wp-block-group` + `wp-block-cover`

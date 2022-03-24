@@ -62,7 +62,7 @@
       "palette": [
         {
           "name": "Text",
-          "slug": "text",
+          "slug": "basetext",
           "color": "var(--base-color-text)"
         },
         {
