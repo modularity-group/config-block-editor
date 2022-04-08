@@ -62,8 +62,7 @@
         width: 100%;
 
         > .block-library-block__reusable-block-container {
-          padding: var(--base-space);
-          border: 1px dashed var(--wp--preset--color--vivid-cyan-blue);
+          border: 2px dashed var(--wp--preset--color--vivid-cyan-blue);
         }
       }
     }
