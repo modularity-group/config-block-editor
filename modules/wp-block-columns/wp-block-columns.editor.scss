@@ -11,8 +11,14 @@
     .wp-block-column {
       margin-left: unset !important;
 
-      :last-child {
-        margin-bottom: 0;
+      .wp-block {
+        :last-child {
+          margin-bottom: 0;
+
+          > * {
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }

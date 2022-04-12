@@ -4,7 +4,7 @@ Tune the block-editor and some crucial wp-blocks for a minimal resetted setup.
 
 ---
 
-Version: 1.2.3
+Version: 1.2.4
 
 Author: Matze @ https://modularity.group
 
@@ -19,6 +19,9 @@ License: MIT
 Usage for site-layout: use `.site-layout-container` in frontend as container for block-output
 
 ---
+
+1.2.4
+- fix editor display of wp-block-image in wp-block-column
 
 1.2.3
 - improve display of reusabel blocks in block editor
