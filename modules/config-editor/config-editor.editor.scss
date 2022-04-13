@@ -34,14 +34,12 @@
   }
 
   .is-root-container {
-    > * {
-      &.is-reusable {
-        max-width: 100% !important;
-        width: 100%;
+    .is-reusable {
+      max-width: 100% !important;
+      width: 100%;
 
-        > .block-library-block__reusable-block-container {
-          border: 2px dashed var(--wp--preset--color--vivid-cyan-blue);
-        }
+      > .block-library-block__reusable-block-container {
+        border: 2px dashed var(--wp--preset--color--vivid-cyan-blue);
       }
     }
   }

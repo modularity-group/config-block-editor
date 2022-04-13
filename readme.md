@@ -24,7 +24,7 @@ Usage for site-layout: use `.site-layout-container` in frontend as container for
 - fix editor display of wp-block-image in wp-block-column
 
 1.2.3
-- improve display of reusabel blocks in block editor
+- improve display of reusable blocks in block editor
 
 1.2.2
 - layout fix for image alignments inside groups in block editor
