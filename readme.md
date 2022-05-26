@@ -4,7 +4,7 @@ Tune the block-editor and some crucial wp-blocks for a minimal resetted setup.
 
 ---
 
-Version: 1.2.6
+Version: 1.2.7
 
 Author: Matze @ https://modularity.group
 
@@ -19,6 +19,10 @@ License: MIT
 Usage for site-layout: use `.site-layout-container` in frontend as container for block-output
 
 ---
+
+1.2.7  
+- force --base-gap variable for columns  
+- enable 200vw image sizes
 
 1.2.6
 - fix editor display of wp-block-image in wp-block-column
