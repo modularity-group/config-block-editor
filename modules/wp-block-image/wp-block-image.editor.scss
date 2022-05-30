@@ -3,6 +3,14 @@
     margin-bottom: var(--base-space);
     height: auto;
 
+    &.alignleft {
+      margin: calc(var(--base-space) / 2) var(--base-space) calc(var(--base-space) / 2) 0;
+    }
+
+    &.alignright {
+      margin: calc(var(--base-space) / 2) 0 calc(var(--base-space) / 2) var(--base-space);
+    }
+
     figcaption {
       margin: calc(var(--base-space) / 2) 0 var(--base-space);
       text-align: center;
