@@ -18,3 +18,7 @@ function editor_assets() {
   );
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\editor_assets' );
+
+add_filter('wp_calculate_image_sizes', function($sizes){
+  return '200vw';
+});

@@ -23,6 +23,10 @@ Usage for site-layout: use `.site-layout-container` in frontend as container for
 1.3.0
 - adapt layout and alignment on WP 6.0
 
+1.2.7  
+- force --base-gap variable for columns  
+- enable 200vw image sizes
+
 1.2.6
 - fix editor display of wp-block-image in wp-block-column
 
